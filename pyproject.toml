@@ -9,7 +9,7 @@ include-package-data = true
 exclude = ["django_example_project", ".env", "git_hooks", ".github", ".git"]
 
 [project]
-name = "django-api-engine"
+name = "django-app-engine"
 authors = [
     {name = "Lauro Cesar de Oliveira", email = "lauro.oliveira@me.com"},
 ]
