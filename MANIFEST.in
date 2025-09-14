@@ -1,0 +1,50 @@
+include LICENSE*
+include README*
+
+# Include pyproject, setup files, requirements (if you want them in sdist)
+include pyproject.toml
+include requirements*.txt
+
+# Include docs (if you ship them)
+#recursive-include docs *.md *.rst *.txt *.png *.jpg *.svg
+
+# Include source code
+recursive-include docs *
+recursive-include django_app_engine *
+
+# ------------------------------
+# Exclude / prune unnecessary stuff
+# ------------------------------
+
+# Version control
+exclude .git*
+prune .git
+prune .github
+prune .gitlab
+prune git_hooks
+prune app_template
+prune project_template
+
+# Editor/IDE settings
+exclude .editorconfig
+exclude .prettierrc*
+prune .idea
+prune .vscode
+
+# CI/CD configs
+exclude .travis.yml
+exclude .circleci*
+prune .circleci
+prune .azure-pipelines
+
+# Build artifacts
+exclude *.egg-info
+prune dist
+prune build
+
+# Tests (optional: remove this prune if you want to ship tests)
+#prune tests
+
+# OS / temp files
+exclude *.DS_Store
+exclude Thumbs.db
