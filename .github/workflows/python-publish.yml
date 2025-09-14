@@ -52,7 +52,7 @@ jobs:
       #
       # ALTERNATIVE: if your GitHub Release name is the PyPI project version string
       # ALTERNATIVE: exactly, uncomment the following line instead:
-      url: https://pypi.org/project/django-api-engine/${{ github.event.release.version }}
+      url: https://pypi.org/project/django-app-engine/${{ github.event.release.version }}
 
     steps:
       - name: Retrieve release distributions

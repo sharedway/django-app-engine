@@ -24,6 +24,8 @@ prune .gitlab
 prune git_hooks
 prune app_template
 prune project_template
+exclude .flake8
+
 
 # Editor/IDE settings
 exclude .editorconfig
@@ -37,10 +39,25 @@ exclude .circleci*
 prune .circleci
 prune .azure-pipelines
 
+recursive-exclude */__pycache__ *
+recursive-exclude */django_api_engine.egg-info *
+prune */django_api_engine.egg-info
+
+prune */__pycache__
+
+global-exclude *~ *.py[cod] *.so
+
 # Build artifacts
 exclude *.egg-info
 prune dist
 prune build
+
+exclude *.egg-info
+prune *.egg-info
+prune *.eggs
+exclude *.pyc
+exclude *.pyo
+prune __pycache__
 
 # Tests (optional: remove this prune if you want to ship tests)
 #prune tests
