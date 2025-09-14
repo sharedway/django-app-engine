@@ -44,5 +44,5 @@ version = {attr = "django_app_engine.VERSION"}
 
 
 [project.urls]
-Homepage = "https://github.com/lauro-cesar/django-app-engine"
-Issues = "https://github.com/lauro-cesar/django-app-engine/issues"
+Homepage = "https://github.com/sharedway/django-app-engine"
+Issues = "https://github.com/sharedway/django-app-engine/issues"

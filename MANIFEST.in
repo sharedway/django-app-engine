@@ -40,8 +40,8 @@ prune .circleci
 prune .azure-pipelines
 
 recursive-exclude */__pycache__ *
-recursive-exclude */django_api_engine.egg-info *
-prune */django_api_engine.egg-info
+recursive-exclude */django_app_engine.egg-info *
+prune */django_app_engine.egg-info
 
 prune */__pycache__
 
