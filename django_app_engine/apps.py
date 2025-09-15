@@ -3,11 +3,16 @@ from django.conf import settings
 from django.core.checks import Critical, Error, Warning
 from django.core.checks import register
 from functools import partial
+from pathlib import Path
+
+APP_BASE_DIR = Path(__file__).resolve().parent
 
 
 class AppRequirementsChecker:
     """
     COMMIT_MSG_ENTRY: add checker for required settings variables
+    COMMIT_MSG_ENTRY: Fixed APP_BASE_DIR, since it is a django reusable app the BASE_DIR will change per project
+
     """
 
     def __init__(self, required_settings_entries={}, optional_settings_entries={}):
@@ -54,7 +59,7 @@ class DjangoAppEngineConfig(AppConfig):
     @property
     def APP_VERSION(self):
         _app_version = "0.0.1"
-        with open("django_app_engine/app_version.txt") as app_version_file:
+        with open(f"{APP_BASE_DIR}/app_version.txt") as app_version_file:
             _app_version = app_version_file.read()
         return _app_version
 
