@@ -7,6 +7,6 @@ class DjangoAppEngineConfig(AppConfig):
 
     def ready(self):
         super().ready()
-        import models
-        import signals
-        import tasks
+        import django_app_engine.models
+        import django_app_engine.signals
+        import django_app_engine.tasks
