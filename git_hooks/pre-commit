@@ -1,6 +1,7 @@
 #/bin/bash
 python manage.py makemigrations --noinput
 python manage.py migrate
+python bump_app_version_on_new_commit.py
 python -m black ./
 
 todos=$(git grep -l TODO "*.py" | wc -l)
