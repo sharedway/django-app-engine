@@ -1,9 +1,5 @@
 # Django APP ENGINE
 
 
+## Roadmap: 🚀 Stealth Mode Activated
 
-
-## Roadmap: (still thinking...)
-
-- [] Create organizations
-- [] Create services
