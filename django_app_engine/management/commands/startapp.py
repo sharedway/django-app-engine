@@ -46,6 +46,7 @@ class Command(UpstreamStartAppCommand):
 
         # Normalize types for argparse defaults
         normalized = {k: _as_str(v) for k, v in raw_defaults.items()}
+        print(MANAGEMENT_BASE_DIR)
 
         # Apply as parser defaults. Keys must match the option 'dest' names from upstream.
         # Common dest names include: template, extension, name, exclude, directory, noinput
