@@ -3,6 +3,7 @@ from typing import Any, Dict
 
 from django.conf import settings
 from django.core.management.commands.startapp import Command as UpstreamStartAppCommand
+import os
 
 MANAGEMENT_BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -46,7 +47,9 @@ class Command(UpstreamStartAppCommand):
 
         # Normalize types for argparse defaults
         normalized = {k: _as_str(v) for k, v in raw_defaults.items()}
-        print(MANAGEMENT_BASE_DIR)
+
+        if os.path.exists(os.path.join(MANAGEMENT_BASE_DIR, "default_app_template")):
+            print(MANAGEMENT_BASE_DIR)
 
         # Apply as parser defaults. Keys must match the option 'dest' names from upstream.
         # Common dest names include: template, extension, name, exclude, directory, noinput
