@@ -23,20 +23,7 @@ classifiers = [
     "Framework :: Django"
 ]
 dependencies = [
-    "Django>=5",
-    "djangorestframework-xml",
-    "djangorestframework",
-    "rest-pandas",
-    "requests",
-    "numpy",
-    "daphne",
-    "django-cors-headers",
-    "gunicorn",
-    "celery[librabbitmq,redis,auth,msgpack]",
-    "autobahn",
-    "Twisted[tls,http2]",
-    "channels",
-    "channels_redis"
+    "Django>=5"
 ]
 
 [tool.setuptools.dynamic]
