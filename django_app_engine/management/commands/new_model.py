@@ -20,6 +20,7 @@ class Command(BaseCommand):
     help = _("Model API Manager")
 
     def handle(self, **options):
+        print(MANAGEMENT_BASE_DIR)
         if os.path.exists(
             os.path.join(MANAGEMENT_BASE_DIR, "default_app_model_template")
         ):
